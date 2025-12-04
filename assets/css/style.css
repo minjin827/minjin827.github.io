@@ -486,6 +486,9 @@ h3,
   width: 18px;
   height: 18px;
   border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid rgba(37, 99, 235, 0.6);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
   z-index: 1;
   transform: translate(-50%, -50%);
 }
@@ -611,6 +614,11 @@ h3,
 [data-theme="light"] .cert-card {
   background: rgba(255, 255, 255, 0.98);
   border-color: rgba(15, 23, 42, 0.12);
+  box-shadow: 0 18px 35px -22px rgba(15, 23, 42, 0.25);
+}
+
+[data-theme="light"] .cert-card:hover {
+  box-shadow: 0 18px 35px -15px rgba(37, 99, 235, 0.25);
 }
 
 [data-theme="light"] .edu-timeline__card {
@@ -640,6 +648,12 @@ h3,
 [data-theme="light"] .glass-panel,
 [data-theme="light"] .edu-timeline__card {
   box-shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.25);
+}
+
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .glass-panel:hover,
+[data-theme="light"] .edu-timeline__card:hover {
+  box-shadow: 0 25px 45px -25px rgba(37, 99, 235, 0.22);
 }
 
 [data-theme="light"] .project-card h3,
@@ -785,6 +799,12 @@ h3,
   color: var(--text-muted);
   font-family: "Exo 2", monospace;
   border: 1px solid transparent;
+}
+
+[data-theme="light"] .tech-tag {
+  background: rgba(148, 163, 184, 0.15);
+  color: var(--text-main);
+  border-color: rgba(148, 163, 184, 0.25);
 }
 
 .project-desc-list {
