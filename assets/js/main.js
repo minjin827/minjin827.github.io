@@ -1,61 +1,19 @@
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
-const heroBar = document.querySelector(".hero__bar");
 
-let heroOffsetRaf = null;
-const scheduleHeroOffsetUpdate = () => {
-  if (!heroBar) return;
-  if (heroOffsetRaf) {
-    cancelAnimationFrame(heroOffsetRaf);
-  }
-  heroOffsetRaf = requestAnimationFrame(() => {
-    const { height } = heroBar.getBoundingClientRect();
-    document.documentElement.style.setProperty("--sticky-hero-offset", `${height}px`);
-    heroOffsetRaf = null;
-  });
-};
-
-if (heroBar) {
-  scheduleHeroOffsetUpdate();
-  window.addEventListener("load", scheduleHeroOffsetUpdate);
-  window.addEventListener("resize", scheduleHeroOffsetUpdate);
-}
-
-const toggleNav = (forceOpen) => {
-  if (!nav || !navToggle) return;
-  const isOpen = typeof forceOpen === "boolean" ? forceOpen : nav.classList.contains("is-open");
-  const nextState = !isOpen;
-  nav.classList.toggle("is-open", nextState);
-  navToggle.setAttribute("aria-expanded", String(nextState));
-};
-
-navToggle?.addEventListener("click", () => toggleNav());
-
-nav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => toggleNav(false));
+navToggle?.addEventListener("click", () => {
+  const isOpen = nav?.classList.toggle("is-open");
+  navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
 });
 
-// Smooth-scroll anchors for better story telling on landing sections.
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (event) => {
-    const id = anchor.getAttribute("href");
-    if (!id || id === "#") return;
-    const target = document.querySelector(id);
-    if (!target) return;
-    event.preventDefault();
-    const prefersMotion = !prefersReducedMotion.matches;
-    target.scrollIntoView({
-      behavior: prefersMotion ? "smooth" : "auto",
-      block: "start",
-    });
-    history.replaceState(null, "", id);
+nav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("is-open");
+    navToggle?.setAttribute("aria-expanded", "false");
   });
 });
 
 const animatedNodes = document.querySelectorAll("[data-animate]");
-
 if (animatedNodes.length) {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -66,41 +24,17 @@ if (animatedNodes.length) {
         }
       });
     },
-    { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+    { threshold: 0.2 }
   );
-
   animatedNodes.forEach((node) => observer.observe(node));
+}
+
+if (window.lucide?.createIcons) {
+  window.lucide.createIcons();
 }
 
 const yearNode = document.querySelector("[data-year]");
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
 }
-
-// Theme toggle functionality
-const themeToggle = document.querySelector("[data-theme-toggle]");
-const themeIcon = themeToggle?.querySelector(".theme-icon");
-
-const getTheme = () => {
-  return localStorage.getItem("theme") || "light";
-};
-
-const setTheme = (theme) => {
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-  if (themeIcon) {
-    themeIcon.textContent = theme === "light" ? "☀️" : "🌙";
-  }
-};
-
-// Initialize theme
-const currentTheme = getTheme();
-setTheme(currentTheme);
-
-// Toggle theme on button click
-themeToggle?.addEventListener("click", () => {
-  const currentTheme = getTheme();
-  const newTheme = currentTheme === "light" ? "dark" : "light";
-  setTheme(newTheme);
-});
 

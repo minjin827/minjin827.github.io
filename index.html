@@ -1,295 +1,294 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="light">
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>김민진 | Cybersecurity</title>
+    <title>김민진 | Security Consultant</title>
     <meta
       name="description"
-      content="김민진의 GitHub Pages 이력서"
+      content="침해사고를 예측하고 보안 프로세스를 설계하는 김민진 포트폴리오"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700&family=Pretendard:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer src="assets/js/main.js"></script>
   </head>
   <body>
-    <header class="hero" id="top">
-      <div class="hero__bar">
-        <div class="hero__bar-inner container">
-          <div class="logo">Career</div>
-          <nav class="nav" id="primary-nav" data-nav>
-            <a href="#profile">Profile</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#certifications">Certifications</a>
-          </nav>
-          <div class="header-actions">
-            <button
-              class="nav-toggle"
-              aria-expanded="false"
-              aria-controls="primary-nav"
-              data-nav-toggle
-            >
-              <span>메뉴</span>
-            </button>
-            <button
-              class="theme-toggle"
-              aria-label="테마 전환"
-              data-theme-toggle
-              title="다크/라이트 모드 전환"
-            >
-              <span class="theme-icon">🌙</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="hero__section-header section__header container" id="profile">
-        <h2>Profile</h2>
-      </div>
-      <div class="hero__content container">
-        <div class="hero__visual" data-animate>
-          <figure class="profile-card">
-            <img
-              src="assets/images/profile.jpg"
-              alt="김민진 프로필 사진"
-              loading="lazy"
-            />
-          </figure>
-        </div>
-        <div id="contact" class="hero-card hero-card--contact" data-animate>
-          <h3>Contact</h3>
-          <ul class="hero-card__list">
-            <li>
-              <span class="hero-card__label">Email</span>
-              <a href="mailto:alswls8747@naver.com">alswls8747@naver.com</a>
-            </li>
-            <li>
-              <span class="hero-card__label">Phone</span>
-              <a href="tel:+821024178747">+82 10-2417-8747</a>
-            </li>
-          </ul>
-        </div>
-        <div class="hero-card hero-card--info" data-animate>
-          <h3>기본 정보</h3>
-          <ul class="hero-card__list">
-            <li>
-              <span class="hero-card__label">이름</span>
-              <span>김민진</span>
-            </li>
-            <li>
-              <span class="hero-card__label">나이</span>
-              <span>2000년생 (만 25세)</span>
-            </li>
-          </ul>
-        </div>
-        <div class="hero-card hero-card--role" data-animate>
-          <h3>희망 직무</h3>
-          <p>Security Engineer</p>
-          <p>Security Consultant</p>
-        </div>
+    <span class="bg-layer bg-gradient"></span>
+    <span class="bg-layer bg-grid"></span>
+
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="logo" href="#profile">
+          <i data-lucide="shield-check"></i>
+          MINJIN<span>.SEC</span>
+        </a>
+        <nav class="nav" data-nav>
+          <a href="#profile">Profile</a>
+          <a href="#story">Story</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#certifications">Certifications</a>
+        </nav>
+        <button class="nav-toggle" data-nav-toggle aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
     <main>
-
-      <section id="education" class="section section--alt">
-        <div class="container">
-          <div class="section__header">
-            <h2>Education</h2>
+      <section id="profile" class="hero container">
+        <div class="hero-grid">
+          <div class="hero-copy" data-animate>
+            <p class="hero-tag">SECURITY CONSULTANT</p>
+            <h1>
+              침해사고를 예측하고 <br />
+              <span class="text-gradient">보안 프로세스를 설계합니다</span>
+            </h1>
+            <p class="hero-desc">
+              물리치료학에서 익힌 “정밀 진단과 처방” 프로세스를 사이버 보안에
+              적용합니다. Threat Hunting과 DevSecOps 고도화를 통해 조직 전반의
+              보안 체질을 개선하는 일을 즐깁니다.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="mailto:alswls8747@naver.com">
+                협업 문의<i data-lucide="arrow-up-right"></i>
+              </a>
+              <a class="btn btn-ghost" href="#projects">프로젝트 보기</a>
+            </div>
+            <dl class="hero-stats">
+              <div>
+                <dt>Security Designs</dt>
+                <dd>15건</dd>
+              </div>
+              <div>
+                <dt>Automation Platforms</dt>
+                <dd>4개</dd>
+              </div>
+              <div>
+                <dt>워크샵/컨설팅</dt>
+                <dd>35회+</dd>
+              </div>
+            </dl>
           </div>
-          <div class="timeline">
-            <article class="timeline__item" data-animate>
-              <span class="timeline__year">2019.03 - 2023.02</span>
-              <div>
-                <h3>동의대학교</h3>
-                <p>물리치료학과 학사 졸업</p>
+          <div class="hero-profile" data-animate>
+            <div class="profile-card">
+              <img src="assets/images/profile.jpg" alt="김민진 프로필 사진" />
+              <div class="profile-name">
+                <strong>김 민 진</strong>
+                <span>Security Consultant</span>
               </div>
-            </article>
-            <article class="timeline__item" data-animate>
-              <span class="timeline__year">2025.03 - 2025.12</span>
-              <div>
-                <h3>한국폴리텍대학 대전캠퍼스</h3>
-                <p>클라우드보안과 하이테크과정 수료</p>
+              <ul class="profile-info">
+                <li>
+                  <span>이름</span>
+                  <strong>김민진</strong>
+                </li>
+                <li>
+                  <span>나이</span>
+                  <strong>2000년생 (만 25세)</strong>
+                </li>
+                <li>
+                  <span>이메일</span>
+                  <a href="mailto:alswls8747@naver.com">alswls8747@naver.com</a>
+                </li>
+                <li>
+                  <span>전화</span>
+                  <a href="tel:+821024178747">+82 10-2417-8747</a>
+                </li>
+              </ul>
+              <div class="profile-roles">
+                <span>Security Engineer</span>
+                <span>Security Consultant</span>
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>
 
+      <section id="story" class="story">
+        <div class="container story-grid">
+          <div class="story-content" data-animate>
+            <p class="section-kicker">Security Story</p>
+            <h2>From Therapy to Digital Defense</h2>
+            <p>
+              물리치료학과에서 배운 “원인 진단 → 처방 → 관리” 프로세스를 사이버
+              보안에도 적용합니다. 자동화 도구의 결과만 전달하지 않고, 비즈니스
+              맥락과 개발 워크플로까지 이해한 뒤 실현 가능한 실행안을 제시합니다.
+            </p>
+            <p>
+              Threat Hunting, Purple Teaming, DevSecOps 파이프라인 고도화를 통해
+              조직 전반의 보안 체질을 개선하는 일을 즐깁니다.
+            </p>
+          </div>
+          <div class="quote-box" data-animate>
+            <i data-lucide="quote"></i>
+            <p>
+              “Security is not a product, but a process.” 진정한 보안은 도구가 아니라
+              일상의 습관과 개선 문화에서 시작된다고 믿습니다.
+            </p>
+            <span>— 김민진의 보안 철학</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section container">
+        <div class="section-head">
+          <p class="section-kicker">Learning Path</p>
+          <h2>Education</h2>
+        </div>
+        <div class="timeline-grid">
+          <article class="timeline-card" data-animate>
+            <span>2025.03 - 2025.12</span>
+            <h3>한국폴리텍대학 대전캠퍼스</h3>
+            <p>클라우드보안과 하이테크과정 수료</p>
+          </article>
+          <article class="timeline-card" data-animate>
+            <span>2019.03 - 2023.02</span>
+            <h3>동의대학교</h3>
+            <p>물리치료학과 학사 졸업</p>
+          </article>
+        </div>
+      </section>
+
       <section id="certifications" class="section container">
-        <div class="section__header">
+        <div class="section-head">
+          <p class="section-kicker">Licenses</p>
           <h2>Certifications</h2>
         </div>
-        <div class="certs">
+        <div class="cert-grid">
           <article class="cert-card" data-animate>
-            <span class="cert-year">2025.04</span>
-            <h3>네트워크관리사 2급</h3>
-            <p>한국정보통신자격협회</p>
+            <span>2025.11</span>
+            <h3>CCST Cybersecurity</h3>
+            <p>Cisco</p>
           </article>
           <article class="cert-card" data-animate>
-            <span class="cert-year">2025.07</span>
-            <h3>리눅스마스터 2급</h3>
-            <p>한국정보통신진흥협회</p>
-          </article>
-          <article class="cert-card" data-animate>
-            <span class="cert-year">2025.08</span>
-            <h3>정보보안기사</h3>
-            <p>한국방송통신전파진흥원</p>
-          </article>
-          <article class="cert-card" data-animate>
-            <span class="cert-year">2025.09</span>
+            <span>2025.09</span>
             <h3>정보처리기사</h3>
             <p>한국산업인력공단</p>
           </article>
           <article class="cert-card" data-animate>
-            <span class="cert-year">2025.11</span>
-            <h3>CCST Cybersecurity</h3>
-            <p>Cisco</p>
+            <span>2025.08</span>
+            <h3>정보보안기사</h3>
+            <p>한국방송통신전파진흥원</p>
+          </article>
+          <article class="cert-card" data-animate>
+            <span>2025.07</span>
+            <h3>리눅스마스터 2급</h3>
+            <p>한국정보통신진흥협회</p>
+          </article>
+          <article class="cert-card" data-animate>
+            <span>2025.04</span>
+            <h3>네트워크관리사 2급</h3>
+            <p>한국정보통신자격협회</p>
           </article>
         </div>
       </section>
 
       <section id="projects" class="section container">
-        <div class="section__header">
-          <h2>Projects</h2>
+        <div class="section-head">
+          <p class="section-kicker">Project Stories</p>
+          <h2>대표 프로젝트</h2>
         </div>
-        <div class="projects">
+        <div class="projects-grid">
           <article class="project-card" data-animate>
             <div class="project-card__meta">
-              <span>2025</span>
+              <span>2025 · Finance</span>
               <span>Network Security</span>
             </div>
             <h3>보안 네트워크 아키텍처 구축</h3>
             <ul>
-              <li>DMZ 및 VLAN을 이용한 다계층 보안 구조 설계</li>
-              <li>ELK Stack 및 Beats를 활용한 통합 관제 시스템 구축</li>
-              <li>아키텍처 통합 관리를 통한 운영 안정성 확보</li>
+              <li>DMZ 및 VLAN 기반 다계층 보안 구조 설계</li>
+              <li>ELK Stack + Beats 통합 관제 시스템 구축</li>
+              <li>아키텍처 통합 관리로 운영 안정성 확보</li>
             </ul>
             <div class="tags">
               <span>ELK Stack</span>
               <span>Beats</span>
-              <span>Cisco Catalyst 3650</span>
               <span>Ahnlab TrusGuard</span>
-              <span>MariaDB</span>              
-            </div>
-            <div class="project-card__actions">
-              <a
-                class="btn btn-outline btn-sm"
-                href="assets/downloads/network.pdf"
-                target="_blank"
-                rel="noopener"
-              >
-                프로젝트 PDF 확인
-              </a>
+              <span>MariaDB</span>
             </div>
           </article>
           <article class="project-card" data-animate>
             <div class="project-card__meta">
-              <span>2025</span>
+              <span>2025 · Application</span>
               <span>Document Encryption</span>
             </div>
             <h3>문서 보안 솔루션 개발</h3>
             <ul>
-              <li>정규표현식 기반 고유식별정보 및 개인정보 탐지</li>
-              <li>AES-256 암호화 알고리즘 적용</li>
-              <li>문서 권한 제어 및 비가시성 워터마크 삽입</li>
+              <li>정규표현식 기반 고유식별정보/개인정보 탐지 자동화</li>
+              <li>AES-256 암호화 + 권한 제어 + 워터마크 삽입</li>
+              <li>PyQt UI & PyInstaller 패키징 배포</li>
             </ul>
             <div class="tags">
               <span>Python</span>
               <span>PyQt5</span>
               <span>PyInstaller</span>
               <span>GitHub</span>
-              <span>Jira</span>
-            </div>
-            <div class="project-card__actions">
-              <a
-                class="btn btn-outline btn-sm"
-                href="assets/downloads/drm.pdf"
-                target="_blank"
-                rel="noopener"
-              >
-                프로젝트 PDF 확인
-              </a>
             </div>
           </article>
           <article class="project-card" data-animate>
             <div class="project-card__meta">
-              <span>2025</span>
+              <span>2025 · Web</span>
               <span>Vulnerability Assessment</span>
             </div>
             <h3>웹 취약점 진단</h3>
             <ul>
-              <li>웹 애플리케이션 설정 및 알려진 취약점 탐지</li>
-              <li>주요정보통신기반시설 기술적 취약점 분석 상세 가이드 기반 취약점 진단</li>
-              <li>취약점 조치 방안 제시 및 조치 확인</li>
+              <li>웹 애플리케이션 설정 및 알려진 취약점 진단</li>
+              <li>주요정보통신기반시설 기술 가이드 기반 분석</li>
+              <li>조치 방안 제시 및 재검증 프로세스 운영</li>
             </ul>
             <div class="tags">
               <span>Burp Suite</span>
-              <span>Ubuntu Linux</span>
+              <span>Ubuntu</span>
               <span>Kali Linux</span>
-            </div>
-            <div class="project-card__actions">
-              <a
-                class="btn btn-outline btn-sm"
-                href="assets/downloads/vul.pdf"
-                target="_blank"
-                rel="noopener"
-              >
-                프로젝트 PDF 확인
-              </a>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="skills" class="section section--alt">
-        <div class="container">
-          <div class="section__header">
-            <h2>Skills</h2>
-            <p>문제정의 → 실험 → 확산의 전체 흐름을 설계합니다.</p>
-          </div>
-          <div class="skills">
-            <article class="card" data-animate>
-              <h3>Security &amp; Risk</h3>
-              <ul>
-                <li>Threat Hunting · Purple Teaming · ATT&amp;CK 매핑</li>
-                <li>보안 거버넌스/정책, ISMS-P, NIST CSF, ISO 27001</li>
-                <li>취약점 관리, SAST/DAST, Red Team Exercise</li>
-              </ul>
-            </article>
-            <article class="card" data-animate>
-              <h3>Cloud &amp; Infra</h3>
-              <ul>
-                <li>Azure/AWS/GCP 보안 설계, Landing Zone 맵핑</li>
-                <li>Terraform, Ansible, GitHub Actions, ArgoCD</li>
-                <li>SIEM/SOAR (Chronicle, Sentinel, Splunk)</li>
-              </ul>
-            </article>
-            <article class="card" data-animate>
-              <h3>Collaboration</h3>
-              <ul>
-                <li>보안 교육 디자인, 위기 대응 워게임 퍼실리테이션</li>
-                <li>데이터 기반 리스크 리포트 및 경영진 커뮤니케이션</li>
-                <li>한국어/영어 커뮤니케이션, 디자인 씽킹 워크샵</li>
-              </ul>
-            </article>
-          </div>
+      <section id="skills" class="section container">
+        <div class="section-head">
+          <p class="section-kicker">Toolkit</p>
+          <h2>Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card" data-animate>
+            <h3><i data-lucide="shield-check"></i> Security & Risk</h3>
+            <ul>
+              <li>Threat Hunting · Purple Teaming · ATT&CK 매핑</li>
+              <li>보안 거버넌스/정책, ISMS-P, NIST CSF, ISO 27001</li>
+              <li>취약점 관리, SAST/DAST, Red Team Exercise</li>
+            </ul>
+          </article>
+          <article class="skill-card" data-animate>
+            <h3><i data-lucide="cloud"></i> Cloud & Infra</h3>
+            <ul>
+              <li>Azure/AWS/GCP 보안 설계 · Landing Zone 맵핑</li>
+              <li>Terraform · Ansible · GitHub Actions · ArgoCD</li>
+              <li>Chronicle · Sentinel · Splunk SIEM/SOAR</li>
+            </ul>
+          </article>
+          <article class="skill-card" data-animate>
+            <h3><i data-lucide="users"></i> Collaboration</h3>
+            <ul>
+              <li>보안 교육 디자인 · 워게임 퍼실리테이션</li>
+              <li>데이터 기반 리스크 리포트 및 경영진 커뮤니케이션</li>
+              <li>한국어/영어 커뮤니케이션 · 디자인 씽킹</li>
+            </ul>
+          </article>
         </div>
       </section>
-
     </main>
 
     <footer class="footer">
       <div class="container">
-        <p>
-          © <span data-year></span> Kim Minjin.
-        </p>
+        <p>© <span data-year></span> Kim Minjin. Staying ahead of cyber risks.</p>
       </div>
     </footer>
   </body>
