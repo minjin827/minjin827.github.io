@@ -927,3 +927,66 @@ h3,
   }
 }
 
+@media (max-width: 600px) {
+  .hero {
+    padding-top: calc(var(--nav-height) + 1.5rem);
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    text-align: left;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .hero-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-card {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .edu-timeline {
+    padding-left: 70px;
+  }
+
+  .edu-timeline__track {
+    left: 18px;
+  }
+
+  .edu-timeline__marker {
+    left: 22px;
+    top: 28px;
+  }
+
+  .edu-timeline__card {
+    margin-left: 60px;
+    padding: 1.4rem;
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card,
+  .glass-panel,
+  .cert-card {
+    padding: 1.5rem;
+  }
+
+  footer .container {
+    padding: 2.5rem 0;
+  }
+}
+
