@@ -77,3 +77,30 @@ if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
 }
 
+// Theme toggle functionality
+const themeToggle = document.querySelector("[data-theme-toggle]");
+const themeIcon = themeToggle?.querySelector(".theme-icon");
+
+const getTheme = () => {
+  return localStorage.getItem("theme") || "dark";
+};
+
+const setTheme = (theme) => {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  if (themeIcon) {
+    themeIcon.textContent = theme === "light" ? "☀️" : "🌙";
+  }
+};
+
+// Initialize theme
+const currentTheme = getTheme();
+setTheme(currentTheme);
+
+// Toggle theme on button click
+themeToggle?.addEventListener("click", () => {
+  const currentTheme = getTheme();
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+  setTheme(newTheme);
+});
+

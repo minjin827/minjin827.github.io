@@ -22,14 +22,24 @@
       <div class="hero__bar">
         <div class="hero__bar-inner container">
           <div class="logo">김민진</div>
-          <button
-            class="nav-toggle"
-            aria-expanded="false"
-            aria-controls="primary-nav"
-            data-nav-toggle
-          >
-            <span>메뉴</span>
-          </button>
+          <div class="header-actions">
+            <button
+              class="theme-toggle"
+              aria-label="테마 전환"
+              data-theme-toggle
+              title="다크/라이트 모드 전환"
+            >
+              <span class="theme-icon">🌙</span>
+            </button>
+            <button
+              class="nav-toggle"
+              aria-expanded="false"
+              aria-controls="primary-nav"
+              data-nav-toggle
+            >
+              <span>메뉴</span>
+            </button>
+          </div>
           <nav class="nav" id="primary-nav" data-nav>
             <a href="#profile">Profile</a>
             <a href="#education">Education</a>
@@ -50,71 +60,55 @@
             />
           </figure>
         </div>
-        <div class="hero__lead" data-animate>
-          <p class="eyebrow">정보보안</p>
-          <div class="hero__actions">
-            <a class="btn btn-primary" href="#contact">협업 문의하기</a>
-            <a class="btn btn-outline" href="#projects">대표 프로젝트 보기</a>
-          </div>
+        <div class="card" data-animate>
+          <h3>About</h3>
+          <p>
+            · 인프라 및 클라우드 보안 교육 수료<br />
+            · 보안 인프라 구축 및 문서 암호화 프로그램 개발 경험
+          </p>
         </div>
         <div class="hero__meta" data-animate>
           <div class="meta-card">
-            <span class="label">현재 직무</span>
-            <p>Security Consultant @ BlueShield Partners</p>
+            <span class="label">희망 직무</span>
+            <p>보안 엔지니어, 보안 컨설턴트</p>
           </div>
-          <div class="meta-card">
-            <span class="label">가용성</span>
-            <p>2025년 2분기부터 신규 프로젝트 참여 가능</p>
+        </div>
+        <div id="contact" class="hero__contact" data-animate>
+          <h3>Contact</h3>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>이메일</h3>
+              <a href="mailto:alswls8747@naver.com">alswls8747@naver.com</a>
+            </article>
+            <article class="contact-card">
+              <h3>전화</h3>
+              <a href="tel:+821024178747">+82 10-2417-8747</a>
+            </article>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section id="profile" class="section container">
-        <div class="section__header">
-          <h2>프로필</h2>
-        </div>
-        <div class="section__grid">
-          <div class="card" data-animate>
-            <h3>소개</h3>
-            <p>
-              · 인프라 및 클라우드 보안 교육 수료<br />
-              · 보안 인프라 구축 및 문서 암호화 프로그램 개발 경험
-            </p>
-          </div>
-          <div class="card stats" data-animate>
-            <div>
-              <span class="stat-value">15</span>
-              <span class="stat-label">보안 아키텍처 설계</span>
-            </div>
-            <div>
-              <span class="stat-value">4</span>
-              <span class="stat-label">보안 자동화 플랫폼</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section id="education" class="section section--alt">
         <div class="container">
           <div class="section__header">
-            <h2>학력</h2>
-            <p>IT·보안 융합 기반의 문제 정의와 실험을 중요하게 생각합니다.</p>
+            <h2>Education</h2>
           </div>
           <div class="timeline">
             <article class="timeline__item" data-animate>
-              <span class="timeline__year">2019 — 2022</span>
+              <span class="timeline__year">2019.03 - 2023.02</span>
               <div>
                 <h3>동의대학교</h3>
                 <p>물리치료학과 학사 졸업</p>
               </div>
             </article>
             <article class="timeline__item" data-animate>
-              <span class="timeline__year">2025</span>
+              <span class="timeline__year">2025.03 - 2025.12</span>
               <div>
-                <h3>한국폴리텍대학 클라우드보안과</h3>
-                <p>클라우드보안과 하이테크과정 교육 수료</p>
+                <h3>한국폴리텍대학 대전캠퍼스</h3>
+                <p>클라우드보안과 하이테크과정 수료</p>
               </div>
             </article>
           </div>
@@ -123,7 +117,7 @@
 
       <section id="projects" class="section container">
         <div class="section__header">
-          <h2>대표 프로젝트</h2>
+          <h2>Projects</h2>
         </div>
         <div class="projects">
           <article class="project-card" data-animate>
@@ -251,7 +245,7 @@
 
       <section id="certifications" class="section container">
         <div class="section__header">
-          <h2>자격증</h2>
+          <h2>Certifications</h2>
         </div>
         <div class="certs">
           <article class="cert-card" data-animate>
@@ -276,31 +270,12 @@
           </article>
           <article class="cert-card" data-animate>
             <span class="cert-year">2025.11</span>
-            <h3>CCST Cybersecurity (Cisco Certified Support Technician)</h3>
+            <h3>CCST Cybersecurity</h3>
             <p>Cisco</p>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="section section--accent">
-        <div class="container">
-          <div class="section__header">
-            <h2>Contact</h2>
-          </div>
-          <div class="contact-grid">
-            <article class="contact-card" data-animate>
-              <h3>이메일</h3>
-              <a href="mailto:alswls8747@naver.com"
-                >alswls8747@naver.com</a
-              >
-            </article>
-            <article class="contact-card" data-animate>
-              <h3>전화</h3>
-              <a href="tel:+821024178747">+82 10-2417-8747</a>
-            </article>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
