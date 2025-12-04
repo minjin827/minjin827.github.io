@@ -2,22 +2,22 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
-const hero = document.querySelector(".hero");
+const heroBar = document.querySelector(".hero__bar");
 
 let heroOffsetRaf = null;
 const scheduleHeroOffsetUpdate = () => {
-  if (!hero) return;
+  if (!heroBar) return;
   if (heroOffsetRaf) {
     cancelAnimationFrame(heroOffsetRaf);
   }
   heroOffsetRaf = requestAnimationFrame(() => {
-    const { height } = hero.getBoundingClientRect();
+    const { height } = heroBar.getBoundingClientRect();
     document.documentElement.style.setProperty("--sticky-hero-offset", `${height}px`);
     heroOffsetRaf = null;
   });
 };
 
-if (hero) {
+if (heroBar) {
   scheduleHeroOffsetUpdate();
   window.addEventListener("load", scheduleHeroOffsetUpdate);
   window.addEventListener("resize", scheduleHeroOffsetUpdate);
