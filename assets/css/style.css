@@ -136,6 +136,12 @@ h3,
   gap: 2.5rem;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .nav-links a {
   font-size: 0.95rem;
   font-weight: 500;
@@ -146,6 +152,31 @@ h3,
 
 .nav-links a:hover {
   color: white;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-main);
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.theme-toggle i {
+  width: 18px;
+  height: 18px;
 }
 
 .hero {
@@ -247,7 +278,7 @@ h3,
 }
 
 .profile-img {
-  width: min(280px, 85%);
+  width: min(240px, 75%);
   height: auto;
   border-radius: 18px;
   object-fit: contain;
@@ -384,6 +415,114 @@ h3,
   background: rgba(6, 182, 212, 0.1);
   border-color: var(--accent);
   transform: translateY(-3px);
+}
+
+.timeline-horizontal {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .timeline-horizontal::before {
+    content: "";
+    position: absolute;
+    top: 1.1rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(148, 163, 184, 0.25);
+  }
+}
+
+.timeline-horizontal__card {
+  flex: 1 1 min(320px, 45%);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, border 0.3s;
+  position: relative;
+}
+
+.timeline-horizontal__card:hover {
+  border-color: var(--accent);
+  transform: translateY(-6px);
+}
+
+@media (min-width: 768px) {
+  .timeline-horizontal__card::before {
+    content: "";
+    position: absolute;
+    top: -1.4rem;
+    left: 2rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+  }
+}
+
+.timeline-horizontal__date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+}
+
+.timeline-horizontal__card h3 {
+  margin: 0.6rem 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.timeline-horizontal__card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+[data-theme="light"] {
+  --bg-deep: #f6f7fb;
+  --bg-main: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --primary: #2563eb;
+  --primary-glow: rgba(37, 99, 235, 0.35);
+  --accent: #0ea5e9;
+  --accent-glow: rgba(14, 165, 233, 0.4);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border: rgba(15, 23, 42, 0.15);
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .theme-toggle {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="light"] .profile-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 25px 40px -25px rgba(15, 23, 42, 0.4);
+}
+
+[data-theme="light"] .cert-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+[data-theme="light"] footer .container {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(15, 23, 42, 0.12);
 }
 
 .timeline-horizontal {
@@ -582,6 +721,10 @@ h3,
 }
 
 @media (max-width: 900px) {
+  .nav-actions {
+    gap: 1rem;
+  }
+
   .hero-grid,
   .story-grid,
   .grid-timeline,
