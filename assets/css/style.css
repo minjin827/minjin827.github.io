@@ -660,7 +660,6 @@ h3,
 
 [data-theme="light"] .project-card:hover,
 [data-theme="light"] .glass-panel:hover,
-[data-theme="light"] .cert-card:hover,
 [data-theme="light"] .timeline-horizontal__card:hover,
 [data-theme="light"] .edu-timeline__card:hover {
   box-shadow: 0 25px 45px -25px rgba(37, 99, 235, 0.22);
