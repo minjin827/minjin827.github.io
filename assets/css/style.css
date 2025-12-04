@@ -50,7 +50,7 @@ img {
 }
 
 .hero {
-  padding: 2.5rem 0 3rem;
+  padding: calc(var(--sticky-hero-offset) + 1.5rem) 0 3rem;
   background: linear-gradient(135deg, #030a1a, #081129 65%, #05122e);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
@@ -58,17 +58,22 @@ img {
 }
 
 .hero__bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #030a1a, #081129 65%, #05122e);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 50;
+  box-shadow: 0 20px 35px rgba(4, 9, 20, 0.35);
+}
+
+.hero__bar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  position: sticky;
-  top: 0;
-  padding: 1.5rem 0;
-  background: linear-gradient(135deg, #030a1a, #081129 65%, #05122e);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  z-index: 20;
-  box-shadow: 0 20px 35px rgba(4, 9, 20, 0.35);
+  padding: 1.2rem 0;
 }
 
 .logo {
@@ -106,7 +111,7 @@ img {
 }
 
 .hero__content {
-  margin-top: 2rem;
+  margin-top: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
