@@ -102,6 +102,11 @@ img {
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 
+.hero__section-header {
+  margin: calc(var(--sticky-hero-offset) + 1.5rem) auto 1.5rem;
+  scroll-margin-top: var(--sticky-hero-offset);
+}
+
 .hero__bar-inner {
   display: flex;
   align-items: center;
@@ -187,6 +192,7 @@ img {
 .hero__visual {
   display: flex;
   justify-content: center;
+  align-items: center;
   order: 1;
 }
 
@@ -207,6 +213,8 @@ img {
   border-radius: 18px;
   object-fit: cover;
   margin-bottom: 0.8rem;
+  box-shadow: 0 25px 55px rgba(255, 255, 255, 0.25);
+  background: transparent;
 }
 
 .profile-card figcaption {
@@ -228,9 +236,21 @@ img {
 }
 
 [data-theme="light"] .hero-card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 35px rgba(15, 23, 42, 0.08);
+}
+
+.hero-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.hero-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
 }
 
 .hero-card__list {
@@ -240,6 +260,14 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+}
+
+.hero-card__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.95rem;
+  color: var(--text);
 }
 
 .hero-card__label {

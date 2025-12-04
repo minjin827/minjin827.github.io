@@ -82,7 +82,7 @@ const themeToggle = document.querySelector("[data-theme-toggle]");
 const themeIcon = themeToggle?.querySelector(".theme-icon");
 
 const getTheme = () => {
-  return localStorage.getItem("theme") || "dark";
+  return localStorage.getItem("theme") || "light";
 };
 
 const setTheme = (theme) => {
