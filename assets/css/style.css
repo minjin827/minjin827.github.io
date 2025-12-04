@@ -646,14 +646,20 @@ h3,
 
 [data-theme="light"] .project-card,
 [data-theme="light"] .glass-panel,
+[data-theme="light"] .cert-card,
+[data-theme="light"] .timeline-horizontal__card,
 [data-theme="light"] .edu-timeline__card {
   box-shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.25);
+  border-color: rgba(15, 23, 42, 0.08);
 }
 
 [data-theme="light"] .project-card:hover,
 [data-theme="light"] .glass-panel:hover,
+[data-theme="light"] .cert-card:hover,
+[data-theme="light"] .timeline-horizontal__card:hover,
 [data-theme="light"] .edu-timeline__card:hover {
   box-shadow: 0 25px 45px -25px rgba(37, 99, 235, 0.22);
+  border-color: rgba(37, 99, 235, 0.6);
 }
 
 [data-theme="light"] .project-card h3,
