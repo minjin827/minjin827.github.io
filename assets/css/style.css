@@ -9,6 +9,11 @@
   --muted: #a0aec0;
   --border: rgba(56, 189, 248, 0.2);
   --shadow: 0 15px 40px rgba(4, 9, 20, 0.45);
+  --sticky-hero-offset: 0px;
+}
+
+html {
+  scroll-padding-top: var(--sticky-hero-offset);
 }
 
 *,
@@ -48,6 +53,10 @@ img {
   padding: 2.5rem 0 3rem;
   background: linear-gradient(135deg, #030a1a, #081129 65%, #05122e);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 25px 50px rgba(4, 9, 20, 0.4);
 }
 
 .hero__bar {
@@ -134,6 +143,11 @@ img {
   gap: 0.35rem;
 }
 
+.btn-sm {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.9rem;
+}
+
 .btn-primary {
   background: var(--accent);
   color: #041321;
@@ -172,6 +186,7 @@ img {
 
 .section {
   padding: 4.5rem 0;
+  scroll-margin-top: var(--sticky-hero-offset);
 }
 
 .section--alt {
@@ -255,6 +270,18 @@ img {
   border-radius: 22px;
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-card__actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.project-card__hint {
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .project-card__meta {
