@@ -16,9 +16,6 @@ const persistTheme = (theme) => {
   }
 };
 
-const prefersDarkScheme = () =>
-  window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-
 const updateThemeToggle = (theme) => {
   const toggle = document.querySelector("[data-theme-toggle]");
   if (!toggle) return;
@@ -45,7 +42,7 @@ const initThemeToggle = () => {
   if (!toggle) return;
 
   const storedTheme = getStoredTheme();
-  const initialTheme = storedTheme || (prefersDarkScheme() ? "dark" : "light");
+  const initialTheme = storedTheme || "dark";
   applyTheme(initialTheme);
 
   toggle.addEventListener("click", () => {
@@ -55,25 +52,11 @@ const initThemeToggle = () => {
     applyTheme(next);
   });
 
-  if (!storedTheme && window.matchMedia) {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (event) => {
-      const hasStored = !!getStoredTheme();
-      if (!hasStored) {
-        applyTheme(event.matches ? "dark" : "light");
-      }
-    };
-    if (typeof mediaQuery.addEventListener === "function") {
-      mediaQuery.addEventListener("change", handleChange);
-    } else if (typeof mediaQuery.addListener === "function") {
-      mediaQuery.addListener(handleChange);
-    }
-  }
 };
 
 const initAnimations = () => {
   const targets = document.querySelectorAll(
-    ".glass-panel, .project-card, .skill-box, .story-content, .quote-box, .timeline-horizontal__card"
+    ".glass-panel, .project-card, .skill-box, .story-content, .quote-box, .edu-timeline__card"
   );
 
   const observer = new IntersectionObserver(
