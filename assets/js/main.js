@@ -1,40 +1,31 @@
-const navToggle = document.querySelector("[data-nav-toggle]");
-const nav = document.querySelector("[data-nav]");
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = document.querySelectorAll(
+    ".glass-panel, .project-card, .skill-box, .story-content, .quote-box"
+  );
 
-navToggle?.addEventListener("click", () => {
-  const isOpen = nav?.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-});
-
-nav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("is-open");
-    navToggle?.setAttribute("aria-expanded", "false");
-  });
-});
-
-const animatedNodes = document.querySelectorAll("[data-animate]");
-if (animatedNodes.length) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
         }
       });
     },
     { threshold: 0.2 }
   );
-  animatedNodes.forEach((node) => observer.observe(node));
-}
 
-if (window.lucide?.createIcons) {
-  window.lucide.createIcons();
-}
+  targets.forEach((element) => {
+    element.style.opacity = "0";
+    element.style.transform = "translateY(20px)";
+    element.style.transition = "all 0.6s ease-out";
+    observer.observe(element);
+  });
+});
 
-const yearNode = document.querySelector("[data-year]");
-if (yearNode) {
-  yearNode.textContent = new Date().getFullYear();
-}
+window.addEventListener("load", () => {
+  if (window.lucide && typeof window.lucide.createIcons === "function") {
+    window.lucide.createIcons();
+  }
+});
 
